@@ -263,19 +263,19 @@
     <section class="features" id="features">
         <div class="features-grid">
             <div class="feature-card">
-                <span class="feature-icon">🛡️</span>
-                <h3>Grief Prevention</h3>
-                <p>Protect your builds with easy-to-use land claims. Build peace of mind with friends without checking your back.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">⚖️</span>
-                <h3>Player Economy</h3>
-                <p>Trade resources, set up custom chest shops, and control the market inside a stable, user-driven virtual marketplace.</p>
-            </div>
-            <div class="feature-card">
                 <span class="feature-icon">🚀</span>
-                <h3>Enhanced Vanilla</h3>
-                <p>Enjoy dynamic custom biomes, unique quality-of-life additions, and seamless tracking setups without requiring custom mods.</p>
+                <h3>Quality of Life</h3>
+                <p>Mods that make Minecraft better. Such as TPA mod, RTP mod and more.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">💎</span>
+                <h3>Purely Vanilla SMP</h3>
+                <p>We are a Vanilla SMP Minecraft Server. Consisting of only Quality of Life Mods making everyday play better. Enjoy our SMP Minecraft with an amazing community!</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⚔️</span>
+                <h3>Minecraft SMP</h3>
+                <p>Team up with friends, establish bases, and explore an infinite world. Our server provides a lag-free environment optimized for long-term survival projects.</p>
             </div>
         </div>
     </section>
@@ -283,18 +283,9 @@
     <!-- Copy Alert Pop-up Notification -->
     <div class="toast" id="copyToast">IP Copied to Clipboard! Ready to Play.</div>
 
-    <!-- JavaScript logic handling copy feedback without line collapse issues -->
+    <!-- The safe, flat-proof single line JavaScript layout -->
     <script>
-        function copyIp() {
-            const ipText = document.getElementById("serverIp").innerText;
-            navigator.clipboard.writeText(ipText).then(() => {
-                const toast = document.getElementById("copyToast");
-                const btnText = document.getElementById("btnText");
-                btnText.innerText = "Copied!";
-                toast.classList.add("show");
-                setTimeout(function(){ toast.classList.remove("show"); btnText.innerText = "Copy IP"; }, 2500);
-            });
-        }
+        function copyIp() { const ipText = document.getElementById("serverIp").innerText; navigator.clipboard.writeText(ipText).then(() => { const toast = document.getElementById("copyToast"); const btnText = document.getElementById("btnText"); btnText.innerText = "Copied!"; toast.classList.add("show"); setTimeout(function(){ toast.classList.remove("show"); btnText.innerText = "Copy IP"; }, 2500); }); }
     </script>
 </body>
 </html>
