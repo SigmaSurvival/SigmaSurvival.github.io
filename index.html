@@ -31,6 +31,9 @@
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(255, 71, 87, 0.05) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(112, 111, 211, 0.05) 0%, transparent 40%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Navigation Bar */
@@ -45,6 +48,7 @@
             top: 0;
             z-index: 100;
             background: rgba(15, 12, 27, 0.7);
+            width: 100%;
         }
 
         .logo {
@@ -83,7 +87,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 100px 20px 60px 20px;
+            padding: 120px 20px;
+            flex-grow: 1;
             position: relative;
         }
 
@@ -159,52 +164,6 @@
             background: var(--primary-hover);
         }
 
-        /* Server Features Section */
-        .features {
-            max-width: 1100px;
-            margin: 60px auto 100px auto;
-            padding: 0 40px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 40px 30px;
-            border-radius: 16px;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .feature-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
         /* Toast Popup Notification */
         .toast {
             position: fixed;
@@ -240,7 +199,6 @@
         <div class="logo">Sigma<span>Survival</span></div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#features">Features</a></li>
         </ul>
     </nav>
 
@@ -256,27 +214,6 @@
                 <div class="ip-address" id="serverIp">sigmasurvivalest.falix.pro</div>
             </div>
             <button class="copy-btn" id="btnText">Copy IP</button>
-        </div>
-    </section>
-
-    <!-- Features Overview -->
-    <section class="features" id="features">
-        <div class="features-grid">
-            <div class="feature-card">
-                <span class="feature-icon">🚀</span>
-                <h3>Quality of Life</h3>
-                <p>Mods that make Minecraft better. Such as TPA mod, RTP mod and more.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">💎</span>
-                <h3>Purely Vanilla SMP</h3>
-                <p>We are a Vanilla SMP Minecraft Server. Consisting of only Quality of Life Mods making everyday play better. Enjoy our SMP Minecraft with an amazing community!</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">⚔️</span>
-                <h3>Minecraft SMP</h3>
-                <p>Team up with friends, establish bases, and explore an infinite world. Our server provides a lag-free environment optimized for long-term survival projects.</p>
-            </div>
         </div>
     </section>
 
