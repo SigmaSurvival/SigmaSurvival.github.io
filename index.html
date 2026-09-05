@@ -10,6 +10,8 @@
         :root {
             --primary: #ff4757;
             --primary-hover: #ff6b81;
+            --discord: #5865f2;
+            --discord-hover: #7289da;
             --bg-dark: #0f0c1b;
             --card-bg: rgba(255, 255, 255, 0.03);
             --border: rgba(255, 255, 255, 0.08);
@@ -90,6 +92,7 @@
             padding: 120px 20px;
             flex-grow: 1;
             position: relative;
+            gap: 20px;
         }
 
         .hero h1 {
@@ -98,7 +101,7 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -1px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             line-height: 1.1;
             background: linear-gradient(135deg, #ffffff 40%, #ced6e0 100%);
             -webkit-background-clip: text;
@@ -109,7 +112,7 @@
             font-size: 1.5rem;
             color: var(--text-muted);
             max-width: 600px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-weight: 400;
             letter-spacing: 0.5px;
         }
@@ -164,6 +167,34 @@
             background: var(--primary-hover);
         }
 
+        /* Discord Button Styling */
+        .discord-btn {
+            background-color: var(--discord);
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 40px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.2);
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+            margin-top: 10px;
+        }
+
+        .discord-btn:hover {
+            background-color: var(--discord-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+        }
+
+        .discord-icon {
+            font-size: 1.3rem;
+        }
+
         /* Toast Popup Notification */
         .toast {
             position: fixed;
@@ -215,6 +246,11 @@
             </div>
             <button class="copy-btn" id="btnText">Copy IP</button>
         </div>
+
+        <!-- Styled Discord Button -->
+        <a href="https://discord.gg/HewXDJ2q" target="_blank" class="discord-btn">
+            <span class="discord-icon">💬</span> Join Our Discord
+        </a>
     </section>
 
     <!-- Copy Alert Pop-up Notification -->
