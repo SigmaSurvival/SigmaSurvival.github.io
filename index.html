@@ -101,11 +101,12 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--text-muted);
             max-width: 600px;
             margin-bottom: 40px;
-            font-weight: 300;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         /* Copyable IP Card */
@@ -246,7 +247,7 @@
     <!-- Hero Showcase Section -->
     <section class="hero">
         <h1>Sigma Survival</h1>
-        <p>Experience an upgraded, vanilla-enhanced survival community. Built for explorers, creators, and competitors alike.</p>
+        <p>Best Vanilla Minecraft SMP.</p>
         
         <!-- Interactive IP Address Copy Component -->
         <div class="ip-card" onclick="copyIp()">
@@ -282,16 +283,7 @@
     <!-- Copy Alert Pop-up Notification -->
     <div class="toast" id="copyToast">IP Copied to Clipboard! Ready to Play.</div>
 
-    <!-- JavaScript logic handling copy feedback without single-line break issues -->
-    <script>
-        function copyIp() {
-            const ipText = document.getElementById("serverIp").innerText;
-            navigator.clipboard.writeText(ipText).then(() => {
-                const toast = document.getElementById("copyToast");
-                const btnText = document.getElementById("btnText");
-                btnText.innerText = "Copied!";
-                toast.classList.add("show");
-                setTimeout(() => {
+    <!-- JavaScript logic handling copy feedback without line collapse issues -->
     <script>
         function copyIp() {
             const ipText = document.getElementById("serverIp").innerText;
@@ -304,3 +296,5 @@
             });
         }
     </script>
+</body>
+</html>
