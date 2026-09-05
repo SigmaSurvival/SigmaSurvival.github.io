@@ -239,7 +239,6 @@
         <div class="logo">Sigma<span>Survival</span></div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="https://github.com" target="_blank">Organization</a></li>
             <li><a href="#features">Features</a></li>
         </ul>
     </nav>
@@ -253,7 +252,7 @@
         <div class="ip-card" onclick="copyIp()">
             <div>
                 <div class="ip-label">Server IP Address</div>
-                <div class="ip-address" id="serverIp">://sigmasurvival.com</div>
+                <div class="ip-address" id="serverIp">sigmasurvivalest.falix.pro</div>
             </div>
             <button class="copy-btn" id="btnText">Copy IP</button>
         </div>
@@ -283,17 +282,7 @@
     <!-- Copy Alert Pop-up Notification -->
     <div class="toast" id="copyToast">IP Copied to Clipboard! Ready to Play.</div>
 
-    <script>
-        function copyIp() {
-            // Get the IP text
-            const ipText = document.getElementById("serverIp").innerText;
-            
-            // Copy execution
-            navigator.clipboard.writeText(ipText).then(() => {
-                const toast = document.getElementById("copyToast");
-                const btnText = document.getElementById("btnText");
-                
-                // Visual Button feedback updates
+    <!-- JavaScript logic handling copy feedback without single-line break issues -->
     <script>
         function copyIp() {
             const ipText = document.getElementById("serverIp").innerText;
@@ -303,9 +292,15 @@
                 btnText.innerText = "Copied!";
                 toast.classList.add("show");
                 setTimeout(() => {
-                    toast.classList.remove("show");
-                    btnText.innerText = "Copy IP";
-                }, 2500);
+    <script>
+        function copyIp() {
+            const ipText = document.getElementById("serverIp").innerText;
+            navigator.clipboard.writeText(ipText).then(() => {
+                const toast = document.getElementById("copyToast");
+                const btnText = document.getElementById("btnText");
+                btnText.innerText = "Copied!";
+                toast.classList.add("show");
+                setTimeout(function(){ toast.classList.remove("show"); btnText.innerText = "Copy IP"; }, 2500);
             });
         }
     </script>
